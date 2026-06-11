@@ -53,7 +53,7 @@
         <div class="sidebar-section">
           <p class="sidebar-heading">Policies</p>
           <a class="sidebar-link" href="#policies">Policy Creation</a>
-          <a class="sidebar-link" href="#placeholder">Policy Deployment</a>
+          <a class="sidebar-link" href="#policy-deployment">Policy Deployment</a>
         </div>
 
         <div class="sidebar-section">
@@ -346,6 +346,72 @@
               <button class="ghost-button" type="button" data-route="policies">Cancel</button>
             </div>
           </form>
+        </section>
+
+        <section id="policy-deployment" class="view" hidden>
+          <div class="empty-state">
+            <div class="deployment-illustration" aria-hidden="true">
+              <div class="deploy-circle"></div>
+              <div class="deploy-monitor main"></div>
+              <div class="deploy-monitor left"></div>
+              <div class="deploy-monitor right"></div>
+            </div>
+            <h1>No policy has been deployed yet.</h1>
+            <p>Apply encryption or decryption policies to custom groups of computers.</p>
+            <div class="empty-actions">
+              <button id="deploy-policy-button" class="primary-button" type="button">
+                &#128444; Deploy Policy
+              </button>
+              <a href="#placeholder">&#9654; Watch Demo</a>
+            </div>
+            <p class="copyright">© 2026 Zoho Corporation Private Limited. All rights reserved.</p>
+          </div>
+        </section>
+
+        <section id="policy-deployment-form" class="view" hidden>
+          <div class="deploy-form-header">
+            <span class="deploy-form-title-icon" aria-hidden="true">&#128444;</span>
+            <h1>Policy Deployment</h1>
+            <button class="info-icon-btn" type="button" aria-label="Information">&#9432;</button>
+          </div>
+
+          <div class="deploy-form-body">
+            <section class="deploy-form-section">
+              <div class="deploy-section-heading">
+                <span class="deploy-section-icon" aria-hidden="true">&#128444;</span>
+                <h2>Custom Group Selection</h2>
+              </div>
+              <p class="deploy-section-desc">Choose one custom group to associate policy with or create a new custom group.</p>
+              <div class="deploy-field-row">
+                <input class="deploy-input" type="text" placeholder="Computer Groups" />
+                <a class="deploy-create-link" href="#placeholder">+ Create Custom Group</a>
+              </div>
+            </section>
+
+            <section class="deploy-form-section">
+              <div class="deploy-section-heading">
+                <span class="deploy-section-icon" aria-hidden="true">&#128444;</span>
+                <h2>Policy Selection</h2>
+              </div>
+              <p class="deploy-section-desc">Select an existing policy to apply or create a new one.</p>
+              <div class="deploy-field-row">
+                <input class="deploy-input" type="text" placeholder="Policy" />
+                <a class="deploy-create-link" href="#policy-form">+ Create Policy</a>
+              </div>
+              <p class="deploy-note">
+                <strong>Note:</strong> Devices with different encryption settings will be re-encrypted using this policy
+              </p>
+            </section>
+
+            <div class="deploy-actions">
+              <button class="primary-button" type="button">Deploy</button>
+              <button class="secondary-button" type="button">Deploy immediately</button>
+              <button class="ghost-button" type="button" data-route="policy-deployment">Cancel</button>
+            </div>
+            <p class="deploy-timing-note">
+              The policy gets deployed only during the next refresh cycle (90 minutes). To deploy now, Click Deploy Immediately.
+            </p>
+          </div>
         </section>
 
         <section id="placeholder" class="view" hidden>
