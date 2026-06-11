@@ -778,6 +778,7 @@ select {
   }
 }
 
+<<<<<<< HEAD
 /* ── Policy Deployment empty-state illustration ── */
 .deployment-illustration {
   position: relative;
@@ -953,4 +954,123 @@ select {
   font-size: 13px;
   color: var(--text-muted);
   text-align: center;
+=======
+/* ── Insights empty-state illustrations ─────────────────────────────── */
+
+.insights-icon-wrap {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  flex-shrink: 0;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 700;
+  color: #93c5fd;
+  line-height: 1;
+  user-select: none;
+}
+
+.sp1 { top: 14px; left: 14px; }
+.sp2 { top: 18px; right: 10px; }
+.sp3 { bottom: 20px; left: 8px; }
+.sp4 { bottom: 14px; right: 12px; }
+
+/* Monitor icon (Managed Computers) */
+.monitor-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.monitor-screen {
+  width: 72px;
+  height: 52px;
+  background: #f0f9ff;
+  border: 3px solid #60a5fa;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monitor-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #bfdbfe;
+  border: 2px solid #60a5fa;
+}
+
+.monitor-foot {
+  width: 22px;
+  height: 10px;
+  background: #60a5fa;
+}
+
+.monitor-base {
+  width: 38px;
+  height: 5px;
+  background: #60a5fa;
+  border-radius: 3px;
+}
+
+/* Folder + lock icon (Encryption Pre-requisites) */
+.folder-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.folder-tab {
+  width: 30px;
+  height: 12px;
+  background: #f59e0b;
+  border-radius: 6px 6px 0 0;
+  margin-left: 2px;
+}
+
+.folder-body {
+  width: 68px;
+  height: 50px;
+  background: #f59e0b;
+  border-radius: 0 6px 6px 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.folder-doc {
+  width: 36px;
+  height: 28px;
+  background: #fef3c7;
+  border-radius: 3px;
+}
+
+.folder-lock-badge {
+  position: absolute;
+  bottom: -6px;
+  right: -12px;
+  width: 30px;
+  height: 30px;
+  background: #3b82f6;
+  border-radius: 50%;
+  border: 3px solid #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+>>>>>>> origin/main
 }
