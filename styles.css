@@ -778,7 +778,6 @@ select {
   }
 }
 
-<<<<<<< HEAD
 /* ── Policy Deployment empty-state illustration ── */
 .deployment-illustration {
   position: relative;
@@ -954,7 +953,8 @@ select {
   font-size: 13px;
   color: var(--text-muted);
   text-align: center;
-=======
+}
+
 /* ── Insights empty-state illustrations ─────────────────────────────── */
 
 .insights-icon-wrap {
@@ -1072,5 +1072,4 @@ select {
   justify-content: center;
   font-size: 12px;
   line-height: 1;
->>>>>>> origin/main
 }

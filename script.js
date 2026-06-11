@@ -1,9 +1,5 @@
 (function () {
-<<<<<<< HEAD
-  const routes = ["dashboard", "policies", "policy-form", "policy-deployment", "policy-deployment-form", "placeholder"];
-=======
-  const routes = ["dashboard", "policies", "policy-form", "managed-computers", "encryption-prerequisites", "placeholder"];
->>>>>>> origin/main
+  const routes = ["dashboard", "policies", "policy-form", "policy-deployment", "policy-deployment-form", "managed-computers", "encryption-prerequisites", "placeholder"];
   const views = document.querySelectorAll(".view");
   const navLinks = document.querySelectorAll('a[href^="#"]');
   const routeButtons = document.querySelectorAll("[data-route]");
