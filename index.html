@@ -58,8 +58,8 @@
 
         <div class="sidebar-section">
           <p class="sidebar-heading">Insights</p>
-          <a class="sidebar-link" href="#placeholder">Managed Computers</a>
-          <a class="sidebar-link" href="#placeholder">Encryption Pre-requisites</a>
+          <a class="sidebar-link" href="#managed-computers">Managed Computers</a>
+          <a class="sidebar-link" href="#encryption-prerequisites">Encryption Pre-requisites</a>
         </div>
 
         <div class="sidebar-section">
@@ -290,13 +290,13 @@
 
                 <div class="form-grid two-columns">
                   <label class="field-group">
-                    <span class="field-label">Windows 10 and above encryption method</span>
+                    <span class="field-label">Encryption method for machines with Windows 10 and above</span>
                     <select>
                       <option selected>Default</option>
                     </select>
                   </label>
                   <label class="field-group">
-                    <span class="field-label">Windows 8.1 and below encryption method</span>
+                    <span class="field-label">Encryption method for machines with Windows 8.1 and below</span>
                     <select>
                       <option selected>Default</option>
                     </select>
@@ -331,7 +331,7 @@
                 </div>
 
                 <label class="field-group narrow-field">
-                  <span class="field-label">Rotation period</span>
+                  <span class="field-label">Specify rotation period for changing recovery key</span>
                   <div class="inline-input">
                     <input type="number" value="30" />
                     <span>Days</span>
@@ -346,6 +346,46 @@
               <button class="ghost-button" type="button" data-route="policies">Cancel</button>
             </div>
           </form>
+        </section>
+
+        <section id="managed-computers" class="view" hidden>
+          <div class="empty-state">
+            <div class="insights-icon-wrap" aria-hidden="true">
+              <span class="sparkle sp1">×</span>
+              <span class="sparkle sp2">×</span>
+              <span class="sparkle sp3">×</span>
+              <div class="monitor-icon">
+                <div class="monitor-screen">
+                  <div class="monitor-avatar"></div>
+                </div>
+                <div class="monitor-foot"></div>
+                <div class="monitor-base"></div>
+              </div>
+            </div>
+            <h1>No data found. Insights will be gathered once BitLocker module is available for managed systems.</h1>
+            <p>All salient details relating to the encryption status of managed computers can be analyzed here.</p>
+            <p class="copyright">© 2026 Zoho Corporation Private Limited. All rights reserved.</p>
+          </div>
+        </section>
+
+        <section id="encryption-prerequisites" class="view" hidden>
+          <div class="empty-state">
+            <div class="insights-icon-wrap" aria-hidden="true">
+              <span class="sparkle sp1">×</span>
+              <span class="sparkle sp2">×</span>
+              <span class="sparkle sp4">×</span>
+              <div class="folder-icon">
+                <div class="folder-tab"></div>
+                <div class="folder-body">
+                  <div class="folder-doc"></div>
+                  <div class="folder-lock-badge">🔒</div>
+                </div>
+              </div>
+            </div>
+            <h1>No Data Available</h1>
+            <p>Know more about the failed encryption pre-requisites of managed computer(s).</p>
+            <p class="copyright">© 2026 Zoho Corporation Private Limited. All rights reserved.</p>
+          </div>
         </section>
 
         <section id="placeholder" class="view" hidden>

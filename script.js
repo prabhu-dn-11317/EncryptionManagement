@@ -1,5 +1,5 @@
 (function () {
-  const routes = ["dashboard", "policies", "policy-form", "placeholder"];
+  const routes = ["dashboard", "policies", "policy-form", "managed-computers", "encryption-prerequisites", "placeholder"];
   const views = document.querySelectorAll(".view");
   const navLinks = document.querySelectorAll('a[href^="#"]');
   const routeButtons = document.querySelectorAll("[data-route]");
