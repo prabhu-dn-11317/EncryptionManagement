@@ -30,7 +30,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          status=$(curl -sS -o /tmp/pages.json -w "%{http_code}" \
+          status=$(curl -L -sS --connect-timeout 5 --max-time 15 -o /dev/null -w "%{http_code}" \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/${{ github.repository }}/pages")
@@ -41,7 +41,7 @@ jobs:
             echo "enabled=false" >> "$GITHUB_OUTPUT"
             echo "::notice::GitHub Pages is not enabled for this repository. Enable Pages in Settings and select GitHub Actions as the source to deploy this site."
           else
-            cat /tmp/pages.json
+            echo "::error::Failed to query GitHub Pages configuration (HTTP $status)."
             exit 1
           fi
 
