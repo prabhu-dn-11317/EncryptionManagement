@@ -1,27 +1,43 @@
 (function () {
-  const routes = ["dashboard", "policies", "policy-form", "policy-deployment", "policy-deployment-form", "managed-computers", "encryption-prerequisites", "placeholder"];
+  const defaultRoute = "dashboard";
+  const routeToView = {
+    dashboard: "dashboard",
+    policies: "policies",
+    "policy-form": "policy-form",
+    "policy-deployment": "placeholder",
+    "managed-computers": "placeholder",
+    "encryption-prerequisites": "placeholder",
+    "reports-bitlocker": "placeholder",
+    "reports-tpm": "placeholder",
+    "recovery-key": "placeholder",
+    placeholder: "placeholder"
+  };
+
   const views = document.querySelectorAll(".view");
-  const navLinks = document.querySelectorAll('a[href^="#"]');
+  const sidebarLinks = document.querySelectorAll(".sidebar .sidebar-link");
   const routeButtons = document.querySelectorAll("[data-route]");
   const createPolicyButton = document.getElementById("create-policy-button");
-  const deployPolicyButton = document.getElementById("deploy-policy-button");
+  const mainContent = document.querySelector(".main-content");
 
-  function getRoute() {
-    const hash = window.location.hash.replace("#", "");
-    return routes.includes(hash) ? hash : "dashboard";
+  function getRouteFromHash() {
+    const hash = window.location.hash.replace("#", "").trim();
+    return Object.prototype.hasOwnProperty.call(routeToView, hash) ? hash : defaultRoute;
   }
 
   function setActiveRoute() {
-    const route = getRoute();
+    const route = getRouteFromHash();
+    const activeView = routeToView[route];
+    const activeSidebarRoute = route === "policy-form" ? "policies" : route;
 
     views.forEach((view) => {
-      const isActive = view.id === route;
+      const isActive = view.id === activeView;
       view.hidden = !isActive;
+      view.classList.toggle("is-active", isActive);
     });
 
-    navLinks.forEach((link) => {
+    sidebarLinks.forEach((link) => {
       const target = link.getAttribute("href").replace("#", "");
-      const isActive = target === route;
+      const isActive = target === activeSidebarRoute;
       link.classList.toggle("active", isActive);
       if (isActive) {
         link.setAttribute("aria-current", "page");
@@ -29,10 +45,20 @@
         link.removeAttribute("aria-current");
       }
     });
+
+    if (mainContent) {
+      mainContent.scrollTo(0, 0);
+    }
   }
 
   function navigate(route) {
-    window.location.hash = route;
+    const nextRoute = Object.prototype.hasOwnProperty.call(routeToView, route) ? route : defaultRoute;
+    const currentHashRoute = window.location.hash.replace("#", "").trim();
+    if (currentHashRoute === nextRoute) {
+      setActiveRoute();
+      return;
+    }
+    window.location.hash = nextRoute;
   }
 
   routeButtons.forEach((button) => {
@@ -43,14 +69,11 @@
     createPolicyButton.addEventListener("click", () => navigate("policy-form"));
   }
 
-  if (deployPolicyButton) {
-    deployPolicyButton.addEventListener("click", () => navigate("policy-deployment-form"));
-  }
-
   window.addEventListener("hashchange", setActiveRoute);
 
-  if (!window.location.hash) {
-    navigate("dashboard");
+  const initialRoute = getRouteFromHash();
+  if (window.location.hash.replace("#", "") !== initialRoute) {
+    window.location.hash = initialRoute;
   } else {
     setActiveRoute();
   }

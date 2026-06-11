@@ -18,6 +18,13 @@ Because this is a dependency-free static site, you can open the file directly in
 
 Routing uses URL hashes, so views work both locally and on GitHub Pages.
 
+## Available routes
+
+- `#dashboard` - dashboard (default when no hash)
+- `#policies` - policy creation empty state
+- `#policy-form` - policy creation form
+- Other sidebar routes open a shared placeholder screen
+
 ## GitHub Pages
 
 1. Push the repository to GitHub.
