@@ -1,9 +1,10 @@
 (function () {
-  const routes = ["dashboard", "policies", "policy-form", "managed-computers", "encryption-prerequisites", "placeholder"];
+  const routes = ["dashboard", "policies", "policy-form", "policy-deployment", "policy-deployment-form", "managed-computers", "encryption-prerequisites", "placeholder"];
   const views = document.querySelectorAll(".view");
   const navLinks = document.querySelectorAll('a[href^="#"]');
   const routeButtons = document.querySelectorAll("[data-route]");
   const createPolicyButton = document.getElementById("create-policy-button");
+  const deployPolicyButton = document.getElementById("deploy-policy-button");
 
   function getRoute() {
     const hash = window.location.hash.replace("#", "");
@@ -40,6 +41,10 @@
 
   if (createPolicyButton) {
     createPolicyButton.addEventListener("click", () => navigate("policy-form"));
+  }
+
+  if (deployPolicyButton) {
+    deployPolicyButton.addEventListener("click", () => navigate("policy-deployment-form"));
   }
 
   window.addEventListener("hashchange", setActiveRoute);
