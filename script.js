@@ -53,7 +53,8 @@
 
   function navigate(route) {
     const nextRoute = Object.prototype.hasOwnProperty.call(routeToView, route) ? route : defaultRoute;
-    if (window.location.hash === `#${nextRoute}`) {
+    const currentHashRoute = window.location.hash.replace("#", "").trim();
+    if (currentHashRoute === nextRoute) {
       setActiveRoute();
       return;
     }
