@@ -1,6 +1,6 @@
 :root {
-  --topbar-height: 60px;
-  --sidebar-width: 268px;
+  --topbar-height: 49px;
+  --sidebar-width: 239px;
   --bg-main: #f4f6f9;
   --bg-panel: #ffffff;
   --bg-sidebar: #eef2f6;
@@ -26,10 +26,11 @@
 html,
 body {
   margin: 0;
-  min-height: 100%;
+  height: 100%;
   font-family: var(--font-stack);
   color: var(--text-main);
   background: var(--bg-main);
+  overflow: hidden;
 }
 
 button,
@@ -48,7 +49,7 @@ a:hover {
 }
 
 .app-shell {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .topbar {
@@ -191,15 +192,26 @@ a:hover {
 }
 
 .main-content {
-  margin-top: var(--topbar-height);
-  margin-left: var(--sidebar-width);
-  min-height: calc(100vh - var(--topbar-height));
+  position: fixed;
+  top: var(--topbar-height);
+  right: 0;
+  bottom: 0;
+  left: var(--sidebar-width);
   padding: 20px;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
 .view {
+  display: none;
+}
+
+.view.is-active {
   display: block;
+}
+
+.view[hidden] {
+  display: none !important;
 }
 
 .view-toolbar {
@@ -717,7 +729,7 @@ select {
   }
 
   .main-content {
-    margin-top: 108px;
+    top: 108px;
   }
 
   .summary-grid,
@@ -745,8 +757,14 @@ select {
   }
 
   .main-content {
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
     margin-left: 0;
     padding: 16px;
+    overflow: visible;
   }
 
   .summary-grid,
