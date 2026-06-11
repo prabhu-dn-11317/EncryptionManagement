@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endpoint Central - BitLocker Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-group">
+          <div class="brand-mark" aria-hidden="true">EC</div>
+          <div class="brand-text">
+            <span class="brand-name">Endpoint Central</span>
+            <span class="brand-subtitle">BitLocker Management</span>
+          </div>
+        </div>
+
+        <nav class="topnav" aria-label="Primary">
+          <a href="#dashboard">Home</a>
+          <a href="#placeholder">Configurations</a>
+          <a href="#placeholder">Threats &amp; Patches</a>
+          <a href="#placeholder">Software Deployment</a>
+          <a href="#placeholder">Inventory</a>
+          <a href="#placeholder">MDM</a>
+          <a href="#placeholder">Admin</a>
+          <a href="#placeholder">Tools</a>
+          <a href="#placeholder">Agent</a>
+          <a href="#placeholder">Browsers</a>
+          <a href="#placeholder">Application Control</a>
+          <a class="active" href="#dashboard">BitLocker Management</a>
+          <a href="#placeholder">…</a>
+        </nav>
+
+        <div class="topbar-actions" aria-label="Quick actions">
+          <a class="quick-link" href="#placeholder">Jump to SDP</a>
+          <button class="icon-button" type="button" aria-label="Search">⌕</button>
+          <button class="icon-button" type="button" aria-label="Notifications">🔔</button>
+          <button class="icon-button" type="button" aria-label="Rocket">🚀</button>
+          <button class="icon-button" type="button" aria-label="Lightning">⚡</button>
+          <button class="avatar-button" type="button" aria-label="User account">P</button>
+          <button class="icon-button" type="button" aria-label="Apps">⋮⋮</button>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <p class="sidebar-heading">Overview</p>
+          <a class="sidebar-link" href="#dashboard">Dashboard</a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-heading">Policies</p>
+          <a class="sidebar-link" href="#policies">Policy Creation</a>
+          <a class="sidebar-link" href="#placeholder">Policy Deployment</a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-heading">Insights</p>
+          <a class="sidebar-link" href="#placeholder">Managed Computers</a>
+          <a class="sidebar-link" href="#placeholder">Encryption Pre-requisites</a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-heading">Reports</p>
+          <a class="sidebar-link" href="#placeholder">BitLocker Reports</a>
+          <a class="sidebar-link" href="#placeholder">TPM Reports</a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-heading">Recovery Key</p>
+          <a class="sidebar-link" href="#placeholder">Retrieve Recovery Key</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <section id="dashboard" class="view">
+          <div class="view-toolbar">
+            <div class="tab active">Information ( 1 )</div>
+            <a class="user-guide-link" href="#placeholder">BitLocker Management User Guide</a>
+          </div>
+
+          <div class="info-banner">
+            <div class="info-badge" aria-hidden="true">i</div>
+            <div>
+              <strong>Recovery key retention enabled</strong>
+              <p>
+                Recovery key retention enabled by default. The recovery key(s) of the computer(s)
+                removed from SoM are retained in the server.
+                <a href="#placeholder">View now</a>
+              </p>
+            </div>
+          </div>
+
+          <section class="panel summary-panel">
+            <div class="panel-header">
+              <h2>Computer Encryption Summary</h2>
+            </div>
+
+            <div class="summary-grid">
+              <article class="summary-item">
+                <div class="summary-count">0</div>
+                <h3>Pre-requisite Failure</h3>
+                <a href="#placeholder">Troubleshoot now</a>
+              </article>
+              <article class="summary-item">
+                <div class="summary-count">0</div>
+                <h3>Available For Deployment</h3>
+                <a href="#policy-form">Deploy Policy</a>
+              </article>
+              <article class="summary-item">
+                <div class="summary-count">0</div>
+                <h3>Partially Encrypted</h3>
+                <a href="#placeholder">Check Status</a>
+              </article>
+              <article class="summary-item">
+                <div class="summary-count">0</div>
+                <h3>Fully Encrypted</h3>
+                <a href="#placeholder">View Computers</a>
+              </article>
+            </div>
+          </section>
+
+          <div class="chart-grid">
+            <section class="panel chart-panel">
+              <div class="panel-header">
+                <h2>Encryption Status</h2>
+              </div>
+              <div class="chart-placeholder">
+                <div class="empty-visual bars" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <p>Data not yet available. No data for encryption status found</p>
+              </div>
+            </section>
+
+            <section class="panel chart-panel">
+              <div class="panel-header">
+                <h2>TPM Availability on Computers</h2>
+              </div>
+              <div class="chart-placeholder">
+                <div class="empty-visual donut" aria-hidden="true"></div>
+                <p>Data not yet available. No computers with/without TPM found.</p>
+              </div>
+            </section>
+
+            <section class="panel chart-panel">
+              <div class="panel-header">
+                <h2>Computers by Authentication Method</h2>
+              </div>
+              <div class="chart-placeholder">
+                <div class="empty-visual list" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <p>Data not yet available. Authentication method details will appear here.</p>
+              </div>
+            </section>
+
+            <section class="panel chart-panel">
+              <div class="panel-header">
+                <h2>Drives by Encryption Method</h2>
+              </div>
+              <div class="chart-placeholder">
+                <div class="empty-visual tiles" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <p>Data not yet available. Encryption method details will appear here.</p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="policies" class="view" hidden>
+          <div class="empty-state">
+            <div class="empty-illustration" aria-hidden="true">
+              <div class="empty-circle large"></div>
+              <div class="empty-circle small"></div>
+              <div class="empty-card"></div>
+            </div>
+            <h1>Policies have not been configured yet!</h1>
+            <p>Create granular policies to match your device encryption requirements.</p>
+            <div class="empty-actions">
+              <button id="create-policy-button" class="primary-button" type="button">
+                + Create Policy
+              </button>
+              <a href="#placeholder">Watch Demo</a>
+            </div>
+            <p class="copyright">© 2026 Zoho Corporation Private Limited. All rights reserved.</p>
+          </div>
+        </section>
+
+        <section id="policy-form" class="view" hidden>
+          <div class="form-page-header">
+            <h1>Policy Creation</h1>
+          </div>
+
+          <form class="policy-form">
+            <section class="form-section">
+              <div class="section-bar">Name and Description</div>
+              <div class="section-body">
+                <label class="field-group">
+                  <span class="field-label">Policy Name <span class="required">*</span></span>
+                  <div class="input-with-meta">
+                    <input type="text" value="Policy_5255" />
+                    <span class="field-meta">244</span>
+                  </div>
+                </label>
+                <a class="inline-link" href="#placeholder">Add Description</a>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-bar">Encryption Configuration</div>
+              <div class="section-body">
+                <div class="form-row split">
+                  <div class="setting-card">
+                    <div>
+                      <p class="setting-title">Drive Encryption</p>
+                      <p class="setting-subtitle">Enable BitLocker encryption settings</p>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-grid two-columns">
+                  <label class="field-group">
+                    <span class="field-label">Authentication type for machines with TPM</span>
+                    <select>
+                      <option selected>TPM only</option>
+                    </select>
+                  </label>
+                  <label class="field-group">
+                    <span class="field-label">Authentication type for machines without TPM</span>
+                    <select>
+                      <option selected>Passphrase</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-bar">Password Settings</div>
+              <div class="section-body">
+                <div class="boxed-group">
+                  <label class="radio-option">
+                    <input type="radio" name="password-policy" checked />
+                    <span>Allow users to skip password request</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="password-policy" />
+                    <span>Enforce immediately</span>
+                  </label>
+
+                  <label class="checkbox-option">
+                    <input type="checkbox" checked />
+                    <span>Enforce password request after the specified days</span>
+                  </label>
+
+                  <div class="inline-input">
+                    <input type="number" value="3" />
+                    <span>Days</span>
+                  </div>
+                </div>
+
+                <div class="form-grid two-columns">
+                  <div class="setting-card">
+                    <div>
+                      <p class="setting-title">Encrypt OS drive only</p>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </div>
+                  <div class="setting-card">
+                    <div>
+                      <p class="setting-title">Encrypt Used Space only</p>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-grid two-columns">
+                  <label class="field-group">
+                    <span class="field-label">Windows 10 and above encryption method</span>
+                    <select>
+                      <option selected>Default</option>
+                    </select>
+                  </label>
+                  <label class="field-group">
+                    <span class="field-label">Windows 8.1 and below encryption method</span>
+                    <select>
+                      <option selected>Default</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-bar">Advanced Settings</div>
+              <div class="section-body">
+                <div class="form-grid two-columns">
+                  <div class="setting-card">
+                    <div>
+                      <p class="setting-title">Update recovery key to domain controller</p>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <div class="setting-card">
+                    <div>
+                      <p class="setting-title">Allow periodic rotation of recovery key</p>
+                    </div>
+                    <label class="toggle">
+                      <input type="checkbox" checked />
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="field-group narrow-field">
+                  <span class="field-label">Rotation period</span>
+                  <div class="inline-input">
+                    <input type="number" value="30" />
+                    <span>Days</span>
+                  </div>
+                </label>
+              </div>
+            </section>
+
+            <div class="form-actions">
+              <button class="primary-button" type="button">Save &amp; Publish</button>
+              <button class="secondary-button" type="button">Save as Draft</button>
+              <button class="ghost-button" type="button" data-route="policies">Cancel</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="placeholder" class="view" hidden>
+          <div class="placeholder-state">
+            <div class="placeholder-icon" aria-hidden="true">▣</div>
+            <h1>More screens can be added here.</h1>
+            <p>Share more screenshots and this area can be expanded with matching views.</p>
+          </div>
+        </section>
+      </main>
+
+      <button class="floating-button" type="button" aria-label="Quick help">?</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
